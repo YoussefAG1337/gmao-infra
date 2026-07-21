@@ -171,12 +171,3 @@ config:
   REDIS_HOST: "gmao-redis-master"
   REDIS_PORT: "6379"
 
-secrets:
-  DATABASE_URL: "mysql://placeholder:placeholder@gmao-mysql:3306/gmao"
-  ACCESS_TOKEN_SECRET: "placeholder-change-me"
-  REFRESH_TOKEN_SECRET: "placeholder-change-me"
-  SMTP_HOST: ""
-  SMTP_PORT: ""
-  SMTP_USER: ""
-  SMTP_PASS: ""
-  SMTP_FROM: ""

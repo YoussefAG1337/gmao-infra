@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gmao-backend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/YoussefAG1337/gmao-infra.git
+    targetRevision: main
+    path: charts/gmao-backend
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gmao
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

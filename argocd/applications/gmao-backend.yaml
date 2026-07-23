@@ -3,6 +3,12 @@ kind: Application
 metadata:
   name: gmao-backend
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: gmao-backend=ghcr.io/youssefag1337/gmao-project/gmao-backend
+    argocd-image-updater.argoproj.io/gmao-backend.update-strategy: latest
+    argocd-image-updater.argoproj.io/gmao-backend.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-branch: main
 spec:
   project: default
   source:

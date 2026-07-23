@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.name
+    value: ghcr.io/youssefag1337/gmao-project/gmao-backend
+    forcestring: true
+  - name: image.tag
+    value: 2cf9924297b3975e2085f555ad2b08926d2eed86
+    forcestring: true
